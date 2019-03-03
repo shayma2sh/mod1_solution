@@ -1,0 +1,63 @@
+<!-- <!DOCTYPE html>
+<html lang="en-US"  ng-app="myApp">
+    <head>
+    	<meta charset="utf-8">
+        <title>assignment1</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    </head>
+    <body ng-controller="myCtrl">
+    	<div>
+    		Plz enter your food item in style "bread,fish,.. "
+    	</div><br>
+    	<textarea ng-model="inputItems">
+    		Add items you to eat on lunch...
+    	</textarea><br>
+    	<button ng-click="enjoyOrnot()">
+    		Check If Too Much
+    		
+    	</button>
+    	<br>
+        <span ng-model = "messege">
+             {{messege}}
+        </span>
+
+
+
+
+        <script src="app.js"></script>
+
+    </body>
+
+</html> -->
+
+<!doctype html>
+<html lang="en" ng-app="LunchCheck">
+  <head>
+    <title>Lunch Checker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <style>
+      .message { font-size: 1.3em; font-weight: bold; }
+    </style>
+  </head>
+<body  ng-controller="LunchCheckController">
+   <div class="container">
+     <h1>Lunch Checker</h1>
+
+         <div class="form-group" >
+             <input id="lunch-menu" type="text" placeholder="list comma separated dishes you usually have for lunch"  class="form-control" 
+             ng-model="inputItems"  ng-style="invalid_input">
+         </div>
+         <div class="form-group" ng-click="enjoyOrnot()">
+             <button class="btn btn-default">
+                 Check If Too Much
+             </button>
+         </div>
+         <div class="form-group message" ng-model = "messege"  ng-style="error_msg">
+             {{messege}}
+         </div>
+   </div>
+  <script src="app.js"></script>
+</body>
+</html>
